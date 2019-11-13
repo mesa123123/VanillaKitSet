@@ -4,7 +4,7 @@ class FirstComponent extends HTMLElement {
         super();
         this.attachShadow({mode: 'open'})
         this.text = this.getAttribute('text')
-    }k
+    }
     
     connectedCallback() {
         this.shadowRoot.innerHTML = '<h1>First Component</h1>'

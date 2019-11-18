@@ -1,10 +1,11 @@
 //Import all from the component files
 //DONE: Create a Mounter
-import componentMounter from './componentMounter.js'
-const mainDiv = document.querySelector("#main")
-window.addEventListener('load', () => {
-    componentMounter(mainDiv)
-})
+import mountComponent from './componentMounter.js'
+import firstComponent from './components/FirstComponent.js'
+//CONCEPT: VanillaTemplateDay5 - Using a Curried Function you can abstract out the calls to the main thread as opposed to having all the components ount by name in the actual component mounter file
+//QUESTION: Day5; in mfrachets tutorial, he is somehow importing index.js files without actually declaring their name, and simpy importing the folder itself, how does this work??
+const firstComponentElement = new firstComponent('Jim', 'Smith')
+mountComponent('#main', firstComponentElement)
 // TODO: create a module bundler
 // TODO: create a templating engine
   //CONCEPT: Tagged Template Literals - Vanilla Template Day 2
